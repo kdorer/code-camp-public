@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package _1_1_RreverseString;
+package reverseString;
 
 import java.util.List;
 import java.util.Scanner;
@@ -14,6 +14,13 @@ import java.util.stream.Collectors;
  * @author kdore
  */
 public class ReverseString {
+    /** INSTRUCTIONS
+     * - Implement as many ways of reversing a string as you can come up with.
+     * - Try to come up with a solution yourself first,
+     *   you can use google as a resource to figure out syntax, but avoid full solutions.
+     * - If you have an idea, but cannot figure out how to implement it,
+     *   write out your thoughts in pseudo-code comments
+     */
     
     // abcdef
     // racecar
@@ -46,52 +53,39 @@ public class ReverseString {
     }
     
     public static void reverse1 (String inStr) {
-        // StringBuilder / StringBuffer
         long startTime = System.nanoTime();
         
-        StringBuilder builder = new StringBuilder();
-        builder.append(inStr).reverse();
-        
+        // TODO: implement reversal
+ 
+        // TODO: change this line to print reversed string
+        //System.out.println("result - " + reverseString);
+ 
         long endTime = System.nanoTime();
-        
-        System.out.println("reverse1 - " + builder + " - " + (endTime - startTime));
+        System.out.println("reverse1 - " + (endTime - startTime));
     }
     
     public static void reverse2 (String inStr) {
-        // for loop
         long startTime = System.nanoTime();
         
-        String revStr = "";
+        // TODO: implement reversal
         
-        int lastChar = inStr.length() - 1;
-        
-        for (int i = lastChar; i > -1; i--) {
-            revStr += inStr.charAt(i);
-        }
-        
+        // TODO: change this line to print reversed string
+        //System.out.println("result - " + reverseString);
+ 
         long endTime = System.nanoTime();
-        System.out.println("reverse2 - " + revStr + " - " + (endTime - startTime));
+        System.out.println("reverse2 - " + (endTime - startTime));
     }
     
     public static void reverse3 (String inStr) { 
-        // stack
         long startTime = System.nanoTime();
         
-        List<Character> charList = inStr.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        // TODO: implement reversal
         
-        Stack<Character> stack = new Stack<>();
-        
-        for (Character c : charList) {
-            stack.push(c);
-        }
-        
-        String rev = "";
-        while (!stack.isEmpty()) {
-            rev += stack.pop();
-        }
-        
+        // TODO: change this line to print reversed string
+        //System.out.println("result - " + reverseString);
+ 
         long endTime = System.nanoTime();
-        System.out.println("reverse3 - " + rev + " - " + (endTime - startTime));
+        System.out.println("reverse3 - " + (endTime - startTime));
     }
     
     public static void reverse4 (String inStr) { }
